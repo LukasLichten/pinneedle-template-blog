@@ -1,0 +1,76 @@
+body {
+  margin: 1rem;
+  /* everyone loves night themes right? */
+  background-color: black;
+  color: white;
+  
+  display: grid;
+  align-items: center;
+  justify-content: center;
+}
+
+/* This does currently not work if index.md exists */
+/* It will however retheme the "Hello World" fallback text */
+.home-heading {
+
+}
+
+.posts-list {
+  list-style-type: none;
+  padding-left: 0rem;
+
+  padding-top: 1rem;
+  padding-bottom: 2.5rem;
+}
+
+.posts-list-link {
+
+}
+
+.home-about-button {
+  /* For some reason that onlz the css gods know, adding top padding or margin won't make an element move down */
+  /* But adding bottom to the list above works... idk, is it because this is an a? */
+  /* padding-top: 5rem */
+
+  /* display: None */
+}
+
+/* This is the Back button on top of posts and about */
+.post-back-button {
+  /* display: None */
+}
+
+/* Currenty there is no way to theme article elements seperatly from the about and index */
+h1 {}
+h2 {}
+h3 {}
+h4 {}
+h5 {}
+h6 {}
+
+/* Code Blocks */
+pre > code {}
+/* Inline Code */
+p > code {}
+
+/* Paragraph/General text*/
+p {}
+/* Italic */
+em {}
+/* fat */
+strong {}
+
+/* links, as you see, a bit of a mess to only get link within posts */
+a:not(.posts-list-link):not(.post-back-button) {}
+/* this works too */
+p > a {}
+/* but both will also apply to links included in index.md and about.md */
+
+/* phone formating */
+@media only screen and (max-width: 1100px) and (orientation: portrait)
+{
+  html {
+    font-size: 2.6rem;
+    /* while this is using rem, this is also setting the rem value for everything else to size based on */
+  }
+}
